@@ -5,6 +5,8 @@
 #ifndef SORTOWANIE_S_SCALANIE_H
 #define SORTOWANIE_S_SCALANIE_H
 
-	void sps(int wejscie[], int wyjscie[], int liczba_elementow, int poczatek, int koniec);
+	#include "../main.h"
+	
+	void sps(w_int wejscie, w_int &wyjscie, int liczba_elementow, int poczatek, int koniec);
 
 #endif //SORTOWANIE_S_SCALANIE_H

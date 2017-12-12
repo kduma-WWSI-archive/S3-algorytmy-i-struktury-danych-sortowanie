@@ -4,6 +4,6 @@
 
 #include "s_scalanie.h"
 
-void sps(int *wejscie, int *wyjscie, int liczba_elementow, int poczatek, int koniec) {
+void sps(w_int wejscie, w_int &wyjscie, int liczba_elementow, int poczatek, int koniec) {
 
 }

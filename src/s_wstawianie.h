@@ -5,6 +5,8 @@
 #ifndef SORTOWANIE_S_WSTAWIANIE_H
 #define SORTOWANIE_S_WSTAWIANIE_H
 
-	void wstawianie(int wejscie[], int wyjscie[], int liczba_elementow);
+	#include "../main.h"
+
+	void wstawianie(w_int wejscie, w_int &wyjscie, int liczba_elementow);
 
 #endif //SORTOWANIE_S_WSTAWIANIE_H

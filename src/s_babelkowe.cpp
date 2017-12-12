@@ -4,6 +4,6 @@
 
 #include "s_babelkowe.h"
 
-void babelkowe(int *wejscie, int *wyjscie, int liczba_elementow) {
+void babelkowe(w_int wejscie, w_int &wyjscie, int liczba_elementow) {
 
 }

@@ -5,6 +5,8 @@
 #ifndef SORTOWANIE_S_BABELKOWE_H
 #define SORTOWANIE_S_BABELKOWE_H
 
-	void babelkowe(int wejscie[], int wyjscie[], int liczba_elementow);
+	#include "../main.h"
+
+	void babelkowe(w_int wejscie, w_int &wyjscie, int liczba_elementow);
 
 #endif //SORTOWANIE_S_BABELKOWE_H

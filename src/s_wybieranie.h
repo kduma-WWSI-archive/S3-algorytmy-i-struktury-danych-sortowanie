@@ -5,6 +5,8 @@
 #ifndef SORTOWANIE_S_WYBIERANIE_H
 #define SORTOWANIE_S_WYBIERANIE_H
 
-	void wybieranie(int wejscie[], int wyjscie[], int liczba_elementow);
+	#include "../main.h"
+
+	void wybieranie(w_int wejscie, w_int &wyjscie, int liczba_elementow);
 
 #endif //SORTOWANIE_S_WYBIERANIE_H

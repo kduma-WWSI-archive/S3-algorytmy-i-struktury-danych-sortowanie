@@ -5,6 +5,8 @@
 #ifndef SORTOWANIE_MAIN_H
 #define SORTOWANIE_MAIN_H
 
+#include <vector>
 
+typedef std::vector<int> w_int;
 
 #endif //SORTOWANIE_MAIN_H

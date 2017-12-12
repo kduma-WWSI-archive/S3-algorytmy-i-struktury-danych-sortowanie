@@ -5,7 +5,7 @@
 #include <random>
 #include "generator_liczb_losowych.h"
 
-void generuj_dane_losowe(int *wyjscie, int liczba_elementow) {
+void generuj_dane_losowe(w_int &wyjscie, int liczba_elementow) {
 	std::random_device rd;
 	std::mt19937 gen(rd());
 	std::uniform_int_distribution<int> rand(1, 10000);
