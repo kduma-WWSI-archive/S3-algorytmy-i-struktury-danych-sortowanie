@@ -5,10 +5,14 @@
 #include <iostream>
 #include "funkcje_we_wy.h"
 
-void wypisz_wyniki(const w_int &test) {
-	std::cout << "Wypisanie zawartości tablicy:\n";
+void wypisz_wyniki(const w_int &wejscie) {
+	wypisz_wyniki("int", wejscie);
+}
 
-	for (int i = 0; i < test.size(); ++i) {
-		std::cout << "\tint[" << i << "] = " << test[i] << "\n";
+void wypisz_wyniki(const std::string &nazwa_tablicy, const w_int &wejscie) {
+	std::cout << "Wypisanie zawartości tablicy '" << nazwa_tablicy << "':\n";
+
+	for (int i = 0; i < wejscie.size(); ++i) {
+		std::cout << "\t" << nazwa_tablicy << "[" << i << "] = " << wejscie[i] << "\n";
 	}
 }
