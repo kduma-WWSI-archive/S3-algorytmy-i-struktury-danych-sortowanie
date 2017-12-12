@@ -7,6 +7,6 @@
 
 	#include "../main.h"
 
-	void wstawianie(w_int wejscie, w_int &wyjscie, int liczba_elementow);
+	void wstawianie(const w_int &wejscie, w_int &wyjscie, int liczba_elementow);
 
 #endif //SORTOWANIE_S_WSTAWIANIE_H

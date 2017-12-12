@@ -7,6 +7,6 @@
 
 	#include "../main.h"
 
-	void babelkowe(w_int wejscie, w_int &wyjscie, int liczba_elementow);
+	void babelkowe(const w_int &wejscie, w_int &wyjscie, int liczba_elementow);
 
 #endif //SORTOWANIE_S_BABELKOWE_H

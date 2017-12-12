@@ -4,6 +4,6 @@
 
 #include "s_wstawianie.h"
 
-void wstawianie(w_int wejscie, w_int &wyjscie, int liczba_elementow) {
+void wstawianie(const w_int &wejscie, w_int &wyjscie, int liczba_elementow) {
 
 }
