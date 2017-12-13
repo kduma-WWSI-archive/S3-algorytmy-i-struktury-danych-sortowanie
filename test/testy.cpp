@@ -13,8 +13,8 @@
 
 
 void uruchom_testy() {
-	w_int dane_wejsciowe{1,6,4,7,2,5,9,0,3,8};
-	w_int oczekiwane_dane_wyjsciowe{0,1,2,3,4,5,6,7,8,9};
+	w_int dane_wejsciowe{5584, 7464, 4394, 9611, 702, 8627, 9961, 259, 1533, 1171, 2056, 8370, 8191, 407, 1825};
+	w_int oczekiwane_dane_wyjsciowe{259, 407, 702, 1171, 1533, 1825, 2056, 4394, 5584, 7464, 8191, 8370, 8627, 9611, 9961};
 
 	testuj_babelkowe(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 	testuj_scalanie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
