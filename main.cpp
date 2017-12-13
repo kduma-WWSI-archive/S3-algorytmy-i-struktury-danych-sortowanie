@@ -13,14 +13,14 @@
 int main() {
 	uruchom_testy();
 
-	int n = 10;
-
-	w_int losowe, uporzadkowane, odwrotne, wynik;
-	generuj_dane_testowe(n, losowe, uporzadkowane, odwrotne);
-
-	wypisz_wyniki("losowe", losowe);
-	wypisz_wyniki("uporzadkowane", uporzadkowane);
-	wypisz_wyniki("odwrotne", odwrotne);
+//	int n = 10;
+//
+//	w_int losowe, uporzadkowane, odwrotne, wynik;
+//	generuj_dane_testowe(n, losowe, uporzadkowane, odwrotne);
+//
+//	wypisz_wyniki("losowe", losowe);
+//	wypisz_wyniki("uporzadkowane", uporzadkowane);
+//	wypisz_wyniki("odwrotne", odwrotne);
 
 	return 0;
 }
