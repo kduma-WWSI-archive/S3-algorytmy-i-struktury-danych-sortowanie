@@ -16,11 +16,11 @@ void uruchom_testy() {
 	w_int dane_wejsciowe{5584, 7464, 4394, 9611, 702, 8627, 9961, 259, 1533, 1171, 2056, 8370, 8191, 407, 1825};
 	w_int oczekiwane_dane_wyjsciowe{259, 407, 702, 1171, 1533, 1825, 2056, 4394, 5584, 7464, 8191, 8370, 8627, 9611, 9961};
 
+	testuj_wstawianie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
+	testuj_wybieranie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 	testuj_babelkowe(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 	testuj_scalanie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 	testuj_szybkie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
-	testuj_wstawianie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
-	testuj_wybieranie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 	testuj_szybkie_l(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 	testuj_szybkie_s(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 }
