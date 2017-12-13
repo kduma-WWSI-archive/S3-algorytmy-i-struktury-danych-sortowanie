@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "main.h"
 
 #include "src/funkcje_we_wy.h"
@@ -33,6 +34,14 @@ int main() {
 
 	for(const auto& badanie : wyniki){
 		wypisz_jednostke_badan(badanie);
+	}
+
+	std::ofstream plik_wyjsciowy("wynik.txt");
+	plik_wyjsciowy << std::fixed;
+	plik_wyjsciowy.precision(10);
+
+	for(const auto& badanie : wyniki){
+		eksportuj_jednostke_badan(badanie, plik_wyjsciowy);
 	}
 
 	return 0;

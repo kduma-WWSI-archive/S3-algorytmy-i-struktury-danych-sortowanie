@@ -7,6 +7,7 @@
 
 	#include "../main.h"
 	#include <string>
+	#include <fstream>
 
 	void wypisz_wyniki(const w_int &wejscie);
 
@@ -17,5 +18,7 @@
 	void wypisz_jednostke_badan(jednostka_badan badanie);
 
 	void wypisz_czasy_wynikowe(czasy_wynikowe czasy);
+
+	void eksportuj_jednostke_badan(const jednostka_badan &badanie, std::ofstream &plik_wynikowy);
 
 #endif //SORTOWANIE_FUNKCJE_WE_WY_H

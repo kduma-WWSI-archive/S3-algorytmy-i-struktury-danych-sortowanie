@@ -64,3 +64,35 @@ void wypisz_czasy_wynikowe(czasy_wynikowe czasy) {
 	std::cout << "\t\tDane Losowe:                  " << czasy.losowe << std::endl;
 	std::cout << "\t\tDane Odwrotnie Uporządkowane: " << czasy.odwrotne << std::endl;
 }
+
+void eksportuj_jednostke_badan(const jednostka_badan &badanie, std::ofstream &plik_wynikowy) {
+	plik_wynikowy << (badanie.duza_zmiennosc ? "duża zmienność" : "mała zmienność") << "\t";
+	plik_wynikowy << badanie.liczba_elementow << "\t";
+	plik_wynikowy << "uporz." << "\t";
+	plik_wynikowy << badanie.wstawianie.uporzadkowane << "\t";
+	plik_wynikowy << badanie.wybieranie.uporzadkowane << "\t";
+	plik_wynikowy << badanie.babelkowe.uporzadkowane << "\t";
+	plik_wynikowy << badanie.scalanie.uporzadkowane << "\t";
+	plik_wynikowy << badanie.szybkie_lewy.uporzadkowane << "\t";
+	plik_wynikowy << badanie.szybkie_srodek.uporzadkowane << "\n";
+
+	plik_wynikowy << (badanie.duza_zmiennosc ? "duża zmienność" : "mała zmienność") << "\t";
+	plik_wynikowy << badanie.liczba_elementow << "\t";
+	plik_wynikowy << "losowy" << "\t";
+	plik_wynikowy << badanie.wstawianie.losowe << "\t";
+	plik_wynikowy << badanie.wybieranie.losowe << "\t";
+	plik_wynikowy << badanie.babelkowe.losowe << "\t";
+	plik_wynikowy << badanie.scalanie.losowe << "\t";
+	plik_wynikowy << badanie.szybkie_lewy.losowe << "\t";
+	plik_wynikowy << badanie.szybkie_srodek.losowe << "\n";
+
+	plik_wynikowy << (badanie.duza_zmiennosc ? "duża zmienność" : "mała zmienność") << "\t";
+	plik_wynikowy << badanie.liczba_elementow << "\t";
+	plik_wynikowy << "odwr. uporz." << "\t";
+	plik_wynikowy << badanie.wstawianie.odwrotne << "\t";
+	plik_wynikowy << badanie.wybieranie.odwrotne << "\t";
+	plik_wynikowy << badanie.babelkowe.odwrotne << "\t";
+	plik_wynikowy << badanie.scalanie.odwrotne << "\t";
+	plik_wynikowy << badanie.szybkie_lewy.odwrotne << "\t";
+	plik_wynikowy << badanie.szybkie_srodek.odwrotne << "\n";
+}
