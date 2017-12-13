@@ -43,9 +43,8 @@ jednostka_badan badaj_algorytmy(int liczba_elementow, bool duza_zmiennosc) {
 	badanie.wybieranie = czasy_dla_algorytmu(wybieranie, liczba_elementow, losowe, uporzadkowane, odwrotne);
 	badanie.babelkowe = czasy_dla_algorytmu(babelkowe, liczba_elementow, losowe, uporzadkowane, odwrotne);
 	badanie.scalanie = czasy_dla_algorytmu(sps, liczba_elementow, losowe, uporzadkowane, odwrotne);
-
-	badanie.szybkie_lewy = {};
-	badanie.szybkie_srodek = {};
+	badanie.szybkie_lewy = czasy_dla_algorytmu(szybkie_l, liczba_elementow, losowe, uporzadkowane, odwrotne);
+	badanie.szybkie_srodek = czasy_dla_algorytmu(szybkie_s, liczba_elementow, losowe, uporzadkowane, odwrotne);
 
 	return badanie;
 }

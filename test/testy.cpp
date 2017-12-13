@@ -21,6 +21,8 @@ void uruchom_testy() {
 	testuj_szybkie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 	testuj_wstawianie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 	testuj_wybieranie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
+	testuj_szybkie_l(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
+	testuj_szybkie_s(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 }
 
 void testuj_babelkowe(const w_int &dane_wejsciowe, const w_int &oczekiwane_dane_wyjsciowe) {
@@ -44,9 +46,27 @@ void testuj_szybkie(const w_int &dane_wejsciowe, const w_int &oczekiwane_dane_wy
 	w_int dane_wyjsciowe;
 
 	const auto liczba_elementow = static_cast<int>(dane_wejsciowe.size());
-	szybkie(dane_wejsciowe, dane_wyjsciowe, liczba_elementow, 0, liczba_elementow-1);
+	szybkie(dane_wejsciowe, dane_wyjsciowe, liczba_elementow);
 
 	porownaj_wyniki("Sortowanie Szybkie", oczekiwane_dane_wyjsciowe, dane_wyjsciowe);
+}
+
+void testuj_szybkie_l(const w_int &dane_wejsciowe, const w_int &oczekiwane_dane_wyjsciowe) {
+	w_int dane_wyjsciowe;
+
+	const auto liczba_elementow = static_cast<int>(dane_wejsciowe.size());
+	szybkie_l(dane_wejsciowe, dane_wyjsciowe, liczba_elementow);
+
+	porownaj_wyniki("Sortowanie Szybkie (x = a[l])", oczekiwane_dane_wyjsciowe, dane_wyjsciowe);
+}
+
+void testuj_szybkie_s(const w_int &dane_wejsciowe, const w_int &oczekiwane_dane_wyjsciowe) {
+	w_int dane_wyjsciowe;
+
+	const auto liczba_elementow = static_cast<int>(dane_wejsciowe.size());
+	szybkie_s(dane_wejsciowe, dane_wyjsciowe, liczba_elementow);
+
+	porownaj_wyniki("Sortowanie Szybkie (x = a[(l+p) div 2])", oczekiwane_dane_wyjsciowe, dane_wyjsciowe);
 }
 
 void testuj_wstawianie(const w_int &dane_wejsciowe, const w_int &oczekiwane_dane_wyjsciowe) {

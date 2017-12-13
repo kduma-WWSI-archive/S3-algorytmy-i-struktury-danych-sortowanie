@@ -4,6 +4,15 @@
 
 #include "s_szybkie.h"
 
-void szybkie(const w_int &wejscie, w_int &wyjscie, int liczba_elementow, int poczatek, int koniec) {
+
+void szybkie(const w_int &wejscie, w_int &wyjscie, int liczba_elementow) {
+
+}
+
+void szybkie_l(const w_int &wejscie, w_int &wyjscie, int liczba_elementow) {
+
+}
+
+void szybkie_s(const w_int &wejscie, w_int &wyjscie, int liczba_elementow) {
 
 }
