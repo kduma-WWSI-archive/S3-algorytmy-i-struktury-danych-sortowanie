@@ -1,12 +1,14 @@
 #include <iostream>
+#include <locale>
 #include "main.h"
-
 #include "src/funkcje_we_wy.h"
 #include "test/testy.h"
 #include "src/badania.h"
 
 
 int main() {
+	std::cout.imbue(std::locale("pl_PL"));
+
 	std::cout << std::fixed;
 	std::cout.precision(10);
 
