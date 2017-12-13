@@ -35,7 +35,7 @@ void testuj_scalanie(const w_int &dane_wejsciowe, const w_int &oczekiwane_dane_w
 	w_int dane_wyjsciowe;
 
 	const auto liczba_elementow = static_cast<int>(dane_wejsciowe.size());
-	sps(dane_wejsciowe, dane_wyjsciowe, liczba_elementow, 0, liczba_elementow-1);
+	sps(dane_wejsciowe, dane_wyjsciowe, liczba_elementow);
 
 	porownaj_wyniki("Sortowanie przez Scalanie", oczekiwane_dane_wyjsciowe, dane_wyjsciowe);
 }
