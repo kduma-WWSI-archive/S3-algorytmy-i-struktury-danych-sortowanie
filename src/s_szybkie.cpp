@@ -5,8 +5,6 @@
 #include "s_szybkie.h"
 #include "funkcje_wspolne.h"
 
-void QuickSort_s(w_int &tablica, int poczatek, int koniec);
-
 void QuickSort_s(w_int &tablica, int poczatek, int koniec) {
 	int i = poczatek;
 	int j = koniec;
