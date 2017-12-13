@@ -8,7 +8,7 @@ void babelkowe(const w_int &wejscie, w_int &wyjscie, int liczba_elementow) {
   wejscie=wyjscie
   for (int i=0;i<liczba_elementow;i++){
   
-    for(int j=0;j<(liczba_elementow-1);i++){
+    for(int j=0;j<(liczba_elementow-1);j++){
     
       if(wyjscie[j]>wyjscie[j-1]){
       
