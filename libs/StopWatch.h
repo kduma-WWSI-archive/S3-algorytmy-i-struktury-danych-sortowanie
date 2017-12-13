@@ -12,6 +12,8 @@
         std::chrono::high_resolution_clock::time_point start_time, end_time;
 
     public:
+        StopWatch();
+
         void start();
         double stop();
 
