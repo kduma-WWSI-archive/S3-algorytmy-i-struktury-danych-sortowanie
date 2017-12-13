@@ -7,7 +7,8 @@
 
 	#include "../main.h"
 
-	void szybkie(const w_int &wejscie, w_int &wyjscie, int liczba_elementow);
+	void QuickSort_s(w_int &tablica, int poczatek, int koniec);
+	void QuickSort_l(w_int &tablica, int poczatek, int koniec);
 	void szybkie_l(const w_int &wejscie, w_int &wyjscie, int liczba_elementow);
 	void szybkie_s(const w_int &wejscie, w_int &wyjscie, int liczba_elementow);
 
