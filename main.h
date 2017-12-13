@@ -9,4 +9,21 @@
 
 typedef std::vector<int> w_int;
 
+struct czasy_wynikowe {
+	double losowe;
+	double uporzadkowane;
+	double odwrotne;
+};
+
+struct jednostka_badan {
+	bool duza_zmiennosc;
+	int liczba_elementow;
+	czasy_wynikowe wstawianie;
+	czasy_wynikowe wybieranie;
+	czasy_wynikowe babelkowe;
+	czasy_wynikowe scalanie;
+	czasy_wynikowe szybkie_lewy;
+	czasy_wynikowe szybkie_srodek;
+};
+
 #endif //SORTOWANIE_MAIN_H

@@ -14,4 +14,8 @@
 
 	void wypisz_wyniki_w_lini(const w_int &wejscie);
 
+	void wypisz_jednostke_badan(jednostka_badan badanie);
+
+	void wypisz_czasy_wynikowe(czasy_wynikowe czasy);
+
 #endif //SORTOWANIE_FUNKCJE_WE_WY_H
