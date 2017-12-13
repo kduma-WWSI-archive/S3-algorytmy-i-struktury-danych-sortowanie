@@ -14,7 +14,7 @@ void wybieranie(const w_int &wejscie, w_int &wyjscie, int liczba_elementow) {
     
       if(wyjscie[j]<wyjscie[a]){
       a=j;
-        swap(wyjscie[a]>wyjscie[i]);
+        std::swap(wyjscie[a],wyjscie[i]);
       }
     
     }
