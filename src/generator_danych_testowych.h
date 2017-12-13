@@ -7,9 +7,10 @@
 
 	#include "../main.h"
 
-	void generuj_dane_testowe(int liczba_elementow, w_int &losowe, w_int &uporzadkowane, w_int &odwrotne);
+	void
+	generuj_dane_testowe(int liczba_elementow, int zakres_gorny, w_int &losowe, w_int &uporzadkowane, w_int &odwrotne);
 
-	w_int generuj_losowe_dane_testowe(int liczba_elementow);
+	w_int generuj_losowe_dane_testowe(int liczba_elementow, int zakres_gorny);
 
 	w_int uporzadkuj_dane_testowe(const w_int &wejscie);
 
