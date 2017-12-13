@@ -3,6 +3,7 @@
 //
 
 #include <random>
+#include <algorithm>
 #include "generator_danych_testowych.h"
 
 w_int generuj_losowe_dane_testowe(int liczba_elementow, int zakres_gorny) {
