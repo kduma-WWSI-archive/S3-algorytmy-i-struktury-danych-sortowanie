@@ -16,3 +16,9 @@ void wypisz_wyniki(const std::string &nazwa_tablicy, const w_int &wejscie) {
 		std::cout << "\t" << nazwa_tablicy << "[" << i << "] = " << wejscie[i] << "\n";
 	}
 }
+
+void wypisz_wyniki_w_lini(const w_int &wejscie) {
+	for (auto element : wejscie) {
+		std::cout << element << "\t";
+	}
+}

@@ -12,4 +12,6 @@
 
 	void wypisz_wyniki(const std::string &nazwa_tablicy, const w_int &wejscie);
 
+	void wypisz_wyniki_w_lini(const w_int &wejscie);
+
 #endif //SORTOWANIE_FUNKCJE_WE_WY_H
