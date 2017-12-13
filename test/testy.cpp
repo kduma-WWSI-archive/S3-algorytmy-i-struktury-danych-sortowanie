@@ -69,9 +69,9 @@ void porownaj_wyniki(const std::string &algorytm, const w_int &oczekiwane_dane_w
 	auto wynik = czy_wyniki_sa_takie_same(oczekiwane_dane_wyjsciowe, dane_wyjsciowe);
 
 	if(wynik){
-		std::cout << "\tOK!   - " << algorytm << "\n";
+		std::cout << "\t\033[1;42;30mOK!\033[0m   - " << algorytm << "\n";
 	}else{
-		std::cout << "\tBŁĄD! - " << algorytm << "\n";
+		std::cout << "\t\033[1;41;37mBŁĄD!\033[0m - " << algorytm << "\n";
 
 		std::cout << "\t\tAlgorytm zwrócił:" << "\n";
 
