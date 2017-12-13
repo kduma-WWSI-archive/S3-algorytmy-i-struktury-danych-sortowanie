@@ -52,6 +52,10 @@ int main() {
 	std::cout.precision(2);
 	std::cout << "\n\n\n\n\nProgram wykonał swoje zadanie w ciągu " << czas_pracy_programu.stop() << " sekund!\n\n\n\n\n";
 
+	plik_wyjsciowy << std::fixed;
+	plik_wyjsciowy.precision(2);
+	plik_wyjsciowy << "\n\n\n\n\nProgram wykonał swoje zadanie w ciągu " << czas_pracy_programu.stop() << " sekund!";
+
 	return 0;
 }
 
