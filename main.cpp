@@ -41,6 +41,7 @@ int main() {
 	std::ofstream plik_wyjsciowy("wynik.txt");
 	plik_wyjsciowy << std::fixed;
 	plik_wyjsciowy.precision(10);
+	plik_wyjsciowy.imbue(std::locale("pl_PL"));
 
 	for(const auto& badanie : wyniki){
 		eksportuj_jednostke_badan(badanie, plik_wyjsciowy);
