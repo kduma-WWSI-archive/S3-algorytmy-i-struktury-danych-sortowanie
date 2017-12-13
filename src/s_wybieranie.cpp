@@ -3,6 +3,7 @@
 //
 
 #include "s_wybieranie.h"
+#include <algorithm>
 
 void wybieranie(const w_int &wejscie, w_int &wyjscie, int liczba_elementow) {
   int a;
