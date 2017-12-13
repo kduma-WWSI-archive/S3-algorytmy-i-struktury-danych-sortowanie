@@ -13,7 +13,7 @@ void babelkowe(const w_int &wejscie, w_int &wyjscie, int liczba_elementow) {
     
       if(wyjscie[j]>wyjscie[j-1]){
       
-        swap(wyjscie[j]>wyjscie[j+1]);
+        swap(wyjscie[j],wyjscie[j+1]);
       }
     
     }
