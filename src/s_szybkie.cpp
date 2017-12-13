@@ -19,7 +19,7 @@ void QuickSort_s(w_int &tablica, int poczatek, int koniec) {
 
 		if( i <= j )
 		{
-			zamien_wartosci_zmiennych( tablica[ i ], tablica[ j ] );
+			std::swap(tablica[ i ], tablica[ j ]);
 
 			i++;
 			j--;
@@ -48,7 +48,7 @@ void QuickSort_l(w_int &tablica, int poczatek, int koniec) {
 
 		if( i <= j )
 		{
-			zamien_wartosci_zmiennych( tablica[ i ], tablica[ j ] );
+			std::swap(tablica[ i ], tablica[ j ]);
 
 			i++;
 			j--;

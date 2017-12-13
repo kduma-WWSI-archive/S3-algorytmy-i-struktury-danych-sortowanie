@@ -9,14 +9,12 @@
 
 
 int main() {
-	StopWatch czas_pracy_programu;
-	std::cout.imbue(std::locale("pl_PL"));
+	uruchom_testy();
 
 	std::cout << std::fixed;
 	std::cout.precision(10);
-
-	uruchom_testy();
-
+	std::cout.imbue(std::locale("pl_PL"));
+	StopWatch czas_pracy_programu;
 	w_int dane_wejsciowe = {10, 100, 1000, 10000, 100000};
 
 	std::vector<jednostka_badan> wyniki;

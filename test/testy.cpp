@@ -85,15 +85,15 @@ void porownaj_wyniki(const std::string &algorytm, const w_int &oczekiwane_dane_w
 		wypisz_wyniki_w_lini(dane_wyjsciowe);
 		std::cout << "\n";
 
-//		std::cout << "\t\ta powinien zwrócić:" << "\n";
-//
-//		std::cout << "\t\t\t";
-//		wypisz_wyniki_w_lini(oczekiwane_dane_wyjsciowe);
-//		std::cout << "\n";
-//
-//		std::cout << "\n";
-//
-//		std::cout << "\n";
+		std::cout << "\t\ta powinien zwrócić:" << "\n";
+
+		std::cout << "\t\t\t";
+		wypisz_wyniki_w_lini(oczekiwane_dane_wyjsciowe);
+		std::cout << "\n";
+
+		std::cout << "\n";
+
+		std::cout << "\n";
 	}
 }
 
