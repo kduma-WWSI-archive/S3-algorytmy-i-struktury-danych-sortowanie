@@ -5,12 +5,12 @@
 #include "s_szybkie.h"
 #include "funkcje_wspolne.h"
 
-void QuickSort(w_int &tablica, int poczatek, int koniec);
-void QuickSort(w_int &tablica, int poczatek, int koniec, int ogranicznik);
+void QuickSort_s(w_int &tablica, int poczatek, int koniec);
 
-void QuickSort(w_int &tablica, int poczatek, int koniec, int ogranicznik) {
+void QuickSort_s(w_int &tablica, int poczatek, int koniec) {
 	int i = poczatek;
 	int j = koniec;
+	int ogranicznik = tablica[( poczatek + koniec ) / 2 ];
 	do
 	{
 		while( tablica[ i ] < ogranicznik )
@@ -29,34 +29,50 @@ void QuickSort(w_int &tablica, int poczatek, int koniec, int ogranicznik) {
 	} while( i <= j );
 
 	if( poczatek < j )
-		QuickSort(tablica, poczatek, j);
+		QuickSort_s(tablica, poczatek, j);
 
 	if( koniec > i )
-		QuickSort(tablica, i, koniec);
+		QuickSort_s(tablica, i, koniec);
 
 }
 
-void QuickSort(w_int &tablica, int poczatek, int koniec) {
-	int ogranicznik = tablica[( poczatek + koniec ) / 2 ];
-	QuickSort(tablica, poczatek, koniec, ogranicznik);
-}
+void QuickSort_l(w_int &tablica, int poczatek, int koniec) {
+	int i = poczatek;
+	int j = koniec;
+	int ogranicznik = tablica[poczatek];
+	do
+	{
+		while( tablica[ i ] < ogranicznik )
+			i++;
 
-void szybkie(const w_int &wejscie, w_int &wyjscie, int liczba_elementow) {
-	wyjscie = wejscie;
+		while( tablica[ j ] > ogranicznik )
+			j--;
 
-	QuickSort(wyjscie, 0, liczba_elementow-1);
+		if( i <= j )
+		{
+			zamien_wartosci_zmiennych( tablica[ i ], tablica[ j ] );
+
+			i++;
+			j--;
+		}
+	} while( i <= j );
+
+	if( poczatek < j )
+		QuickSort_l(tablica, poczatek, j);
+
+	if( koniec > i )
+		QuickSort_l(tablica, i, koniec);
+
 }
 
 void szybkie_l(const w_int &wejscie, w_int &wyjscie, int liczba_elementow) {
 	wyjscie = wejscie;
 
-	int ogranicznik = wyjscie[0];
-	QuickSort(wyjscie, 0, liczba_elementow-1, ogranicznik);
+	QuickSort_l(wyjscie, 0, liczba_elementow - 1);
 }
 
 void szybkie_s(const w_int &wejscie, w_int &wyjscie, int liczba_elementow) {
 	wyjscie = wejscie;
 
-	int ogranicznik = wyjscie[ (liczba_elementow-1)/2 ];
-	QuickSort(wyjscie, 0, liczba_elementow-1, ogranicznik);
+	QuickSort_s(wyjscie, 0, liczba_elementow - 1);
 }
