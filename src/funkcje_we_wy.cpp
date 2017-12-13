@@ -60,9 +60,20 @@ void wypisz_jednostke_badan(jednostka_badan badanie) {
 }
 
 void wypisz_czasy_wynikowe(czasy_wynikowe czasy) {
-	std::cout << "\t\tDane Uporządkowane:           " << czasy.uporzadkowane << std::endl;
-	std::cout << "\t\tDane Losowe:                  " << czasy.losowe << std::endl;
-	std::cout << "\t\tDane Odwrotnie Uporządkowane: " << czasy.odwrotne << std::endl;
+	if(czasy.uporzadkowane != -1)
+		std::cout << "\t\tDane Uporządkowane:           " << czasy.uporzadkowane << std::endl;
+	else
+		std::cout << "\t\tDane Uporządkowane:           " << "Przepełnienie Stosu" << std::endl;
+
+	if(czasy.uporzadkowane != -1)
+		std::cout << "\t\tDane Losowe:                  " << czasy.losowe << std::endl;
+	else
+		std::cout << "\t\tDane Losowe:                  " << "Przepełnienie Stosu" << std::endl;
+
+	if(czasy.uporzadkowane != -1)
+		std::cout << "\t\tDane Odwrotnie Uporządkowane: " << czasy.odwrotne << std::endl;
+	else
+		std::cout << "\t\tDane Odwrotnie Uporządkowane: " << "Przepełnienie Stosu" << std::endl;
 }
 
 void eksportuj_jednostke_badan(const jednostka_badan &badanie, std::ofstream &plik_wynikowy) {

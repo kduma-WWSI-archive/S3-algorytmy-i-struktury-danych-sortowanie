@@ -23,17 +23,18 @@ jednostka_badan badaj_algorytmy(int liczba_elementow, bool duza_zmiennosc) {
 	badanie.liczba_elementow = liczba_elementow;
 	badanie.duza_zmiennosc = duza_zmiennosc;
 
-	badanie.wstawianie = czasy_dla_algorytmu("wstawianie", wstawianie, liczba_elementow, losowe, uporzadkowane,
-											 odwrotne);
-	badanie.wybieranie = czasy_dla_algorytmu("wybieranie", wybieranie, liczba_elementow, losowe, uporzadkowane,
-											 odwrotne);
-	badanie.babelkowe = czasy_dla_algorytmu("babelkowe", babelkowe, liczba_elementow, losowe, uporzadkowane,
-											odwrotne);
+	badanie.wstawianie = czasy_dla_algorytmu("wstawianie", wstawianie, liczba_elementow, losowe, uporzadkowane, odwrotne);
+	badanie.wybieranie = czasy_dla_algorytmu("wybieranie", wybieranie, liczba_elementow, losowe, uporzadkowane, odwrotne);
+	badanie.babelkowe = czasy_dla_algorytmu("babelkowe", babelkowe, liczba_elementow, losowe, uporzadkowane, odwrotne);
 	badanie.scalanie = czasy_dla_algorytmu("scalanie", sps, liczba_elementow, losowe, uporzadkowane, odwrotne);
-	badanie.szybkie_lewy = czasy_dla_algorytmu("szybkie_lewy", szybkie_l, liczba_elementow, losowe, uporzadkowane,
-											   odwrotne);
-	badanie.szybkie_srodek = czasy_dla_algorytmu("szybkie_srodek", szybkie_s, liczba_elementow, losowe, uporzadkowane,
-												 odwrotne);
+
+	if(liczba_elementow < 100000){
+		badanie.szybkie_lewy = czasy_dla_algorytmu("szybkie_lewy", szybkie_l, liczba_elementow, losowe, uporzadkowane, odwrotne);
+		badanie.szybkie_srodek = czasy_dla_algorytmu("szybkie_srodek", szybkie_s, liczba_elementow, losowe, uporzadkowane, odwrotne);
+	} else {
+		badanie.szybkie_lewy = {-1, -1, -1};
+		badanie.szybkie_srodek = {-1, -1, -1};
+	}
 
 	return badanie;
 }
