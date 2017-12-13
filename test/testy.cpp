@@ -20,7 +20,6 @@ void uruchom_testy() {
 	testuj_wybieranie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 	testuj_babelkowe(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 	testuj_scalanie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
-	testuj_szybkie(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 	testuj_szybkie_l(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 	testuj_szybkie_s(dane_wejsciowe, oczekiwane_dane_wyjsciowe);
 }
@@ -40,15 +39,6 @@ void testuj_scalanie(const w_int &dane_wejsciowe, const w_int &oczekiwane_dane_w
 	sps(dane_wejsciowe, dane_wyjsciowe, liczba_elementow);
 
 	porownaj_wyniki("Sortowanie przez Scalanie", oczekiwane_dane_wyjsciowe, dane_wyjsciowe);
-}
-
-void testuj_szybkie(const w_int &dane_wejsciowe, const w_int &oczekiwane_dane_wyjsciowe) {
-	w_int dane_wyjsciowe;
-
-	const auto liczba_elementow = static_cast<int>(dane_wejsciowe.size());
-	szybkie(dane_wejsciowe, dane_wyjsciowe, liczba_elementow);
-
-	porownaj_wyniki("Sortowanie Szybkie", oczekiwane_dane_wyjsciowe, dane_wyjsciowe);
 }
 
 void testuj_szybkie_l(const w_int &dane_wejsciowe, const w_int &oczekiwane_dane_wyjsciowe) {
