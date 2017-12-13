@@ -76,13 +76,9 @@ void testuj_wybieranie(const w_int &dane_wejsciowe, const w_int &oczekiwane_dane
 }
 
 void porownaj_wyniki(const std::string &algorytm, const w_int &oczekiwane_dane_wyjsciowe, const w_int &dane_wyjsciowe) {
-	auto wynik = czy_wyniki_sa_takie_same(oczekiwane_dane_wyjsciowe, dane_wyjsciowe);
+	bool wynik = naglowek_porownania(algorytm, oczekiwane_dane_wyjsciowe, dane_wyjsciowe);
 
-	if(wynik){
-		std::cout << "\t\033[1;42;30mOK!\033[0m   - " << algorytm << "\n";
-	}else{
-		std::cout << "\t\033[1;41;37mBŁĄD!\033[0m - " << algorytm << "\n";
-
+	if(!wynik){
 		std::cout << "\t\tAlgorytm zwrócił:" << "\n";
 
 		std::cout << "\t\t\t";
@@ -99,6 +95,17 @@ void porownaj_wyniki(const std::string &algorytm, const w_int &oczekiwane_dane_w
 //
 //		std::cout << "\n";
 	}
+}
+
+bool naglowek_porownania(const std::string &algorytm, const w_int &oczekiwane_dane_wyjsciowe, const w_int &dane_wyjsciowe) {
+	auto wynik = czy_wyniki_sa_takie_same(oczekiwane_dane_wyjsciowe, dane_wyjsciowe);
+
+	if(wynik){
+		std::cout << "\t\033[1;42;30mOK!\033[0m   - " << algorytm << "\n";
+	}else {
+		std::cout << "\t\033[1;41;37mBŁĄD!\033[0m - " << algorytm << "\n";
+	}
+	return wynik;
 }
 
 bool czy_wyniki_sa_takie_same(const w_int &oczekiwane_dane_wyjsciowe, const w_int &dane_wyjsciowe) {
