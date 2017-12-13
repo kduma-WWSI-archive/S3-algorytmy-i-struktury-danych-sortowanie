@@ -48,19 +48,19 @@ czasy_wynikowe czasy_dla_algorytmu(const std::string &algorytm, void (*funkcja_s
 	timer.start();
 	funkcja_sortujaca(losowe, wynik, liczba_elementow);
 	czasy.losowe = timer.stop();
-	naglowek_porownania(pad_right(algorytm+";", 15)+" dane losowe;        n = "+std::to_string(liczba_elementow), wynik, uporzadkowane);
+	naglowek_porownania(pad_right(algorytm+";", 15)+" dane losowe;        n = "+pad_right(std::to_string(liczba_elementow)+";", 10)+std::to_string(czasy.losowe)+" sekund", wynik, uporzadkowane);
 
 	wynik.resize(0);
 	timer.start();
 	funkcja_sortujaca(uporzadkowane, wynik, liczba_elementow);
 	czasy.uporzadkowane = timer.stop();
-	naglowek_porownania(pad_right(algorytm+";", 15)+" dane uporzadkowane; n = "+std::to_string(liczba_elementow), wynik, uporzadkowane);
+	naglowek_porownania(pad_right(algorytm+";", 15)+" dane uporzadkowane; n = "+pad_right(std::to_string(liczba_elementow)+";", 10)+std::to_string(czasy.uporzadkowane)+" sekund", wynik, uporzadkowane);
 
 	wynik.resize(0);
 	timer.start();
 	funkcja_sortujaca(odwrotne, wynik, liczba_elementow);
 	czasy.odwrotne = timer.stop();
-	naglowek_porownania(pad_right(algorytm+";", 15)+" dane odwrotne;      n = "+std::to_string(liczba_elementow), wynik, uporzadkowane);
+	naglowek_porownania(pad_right(algorytm+";", 15)+" dane odwrotne;      n = "+pad_right(std::to_string(liczba_elementow)+";", 10)+std::to_string(czasy.odwrotne)+" sekund", wynik, uporzadkowane);
 
 	return czasy;
 }

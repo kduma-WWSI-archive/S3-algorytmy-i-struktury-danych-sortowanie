@@ -5,9 +5,11 @@
 #include "src/funkcje_we_wy.h"
 #include "test/testy.h"
 #include "src/badania.h"
+#include "libs/StopWatch.h"
 
 
 int main() {
+	StopWatch czas_pracy_programu;
 	std::cout.imbue(std::locale("pl_PL"));
 
 	std::cout << std::fixed;
@@ -46,6 +48,10 @@ int main() {
 	for(const auto& badanie : wyniki){
 		eksportuj_jednostke_badan(badanie, plik_wyjsciowy);
 	}
+
+	std::cout << std::fixed;
+	std::cout.precision(2);
+	std::cout << "\n\n\n\n\nProgram wykonał swoje zadanie w ciągu " << czas_pracy_programu.stop() << " sekund!\n\n\n\n\n";
 
 	return 0;
 }

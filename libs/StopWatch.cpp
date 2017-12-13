@@ -17,3 +17,7 @@ double StopWatch::stop() {
 
     return duration / 1000000.0;
 }
+
+StopWatch::StopWatch() {
+    start();
+}
