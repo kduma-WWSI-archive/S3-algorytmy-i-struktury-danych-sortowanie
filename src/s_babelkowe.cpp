@@ -3,6 +3,7 @@
 //
 
 #include "s_babelkowe.h"
+#include <algorithm>
 
 void babelkowe(const w_int &wejscie, w_int &wyjscie, int liczba_elementow) {
   wyjscie=wejscie;
