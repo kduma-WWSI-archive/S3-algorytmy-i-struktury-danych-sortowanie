@@ -65,12 +65,12 @@ void wypisz_czasy_wynikowe(czasy_wynikowe czasy) {
 	else
 		std::cout << "\t\tDane Uporządkowane:           " << "Przepełnienie Stosu" << std::endl;
 
-	if(czasy.uporzadkowane != -1)
+	if(czasy.losowe != -1)
 		std::cout << "\t\tDane Losowe:                  " << czasy.losowe << std::endl;
 	else
 		std::cout << "\t\tDane Losowe:                  " << "Przepełnienie Stosu" << std::endl;
 
-	if(czasy.uporzadkowane != -1)
+	if(czasy.odwrotne != -1)
 		std::cout << "\t\tDane Odwrotnie Uporządkowane: " << czasy.odwrotne << std::endl;
 	else
 		std::cout << "\t\tDane Odwrotnie Uporządkowane: " << "Przepełnienie Stosu" << std::endl;
